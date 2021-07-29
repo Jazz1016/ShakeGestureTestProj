@@ -29,9 +29,12 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            let alert = UIAlertController(title: "Detected Shake", message: "Phone hasbeen shook", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
-            present(alert, animated: true)
+            let vc = UIViewController()
+            vc.view.backgroundColor = .systemOrange
+            present(vc, animated: true)
+//            let alert = UIAlertController(title: "Detected Shake", message: "Phone has been shook", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+//            present(alert, animated: true)
         }
     }
     
